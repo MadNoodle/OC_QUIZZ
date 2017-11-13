@@ -13,6 +13,9 @@
 		B93366251FB9AFD700AA8228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B93366241FB9AFD700AA8228 /* Assets.xcassets */; };
 		B93366281FB9AFD700AA8228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93366261FB9AFD700AA8228 /* LaunchScreen.storyboard */; };
 		B93366301FB9B0BC00AA8228 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = B933662F1FB9B0BB00AA8228 /* Balham.otf */; };
+		B93366361FB9B40300AA8228 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93366351FB9B40300AA8228 /* Question.swift */; };
+		B93366381FB9D04F00AA8228 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93366371FB9D04F00AA8228 /* Game.swift */; };
+		B933663A1FB9D08500AA8228 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93366391FB9D08500AA8228 /* QuestionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		B93366271FB9AFD700AA8228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B93366291FB9AFD700AA8228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B933662F1FB9B0BB00AA8228 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
+		B93366351FB9B40300AA8228 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B93366371FB9D04F00AA8228 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B93366391FB9D08500AA8228 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,9 @@
 		B93366311FB9B20200AA8228 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B93366351FB9B40300AA8228 /* Question.swift */,
+				B93366371FB9D04F00AA8228 /* Game.swift */,
+				B93366391FB9D08500AA8228 /* QuestionManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93366361FB9B40300AA8228 /* Question.swift in Sources */,
 				B93366201FB9AFD700AA8228 /* ViewController.swift in Sources */,
 				B933661E1FB9AFD700AA8228 /* AppDelegate.swift in Sources */,
+				B933663A1FB9D08500AA8228 /* QuestionManager.swift in Sources */,
+				B93366381FB9D04F00AA8228 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
