@@ -3,23 +3,21 @@
 //  OpenQuizz
 //
 //  Created by Ambroise COLLON on 13/06/2017.
-//  Copyright Â© 2017 OpenClassrooms. All rights reserved.
+//  Copyright © 2017 OpenClassrooms. All rights reserved.
 //
-
 import Foundation
 
 
 class Game {
   var score = 0
-  
-  private var questions = [Question]()
-  private var currentIndex = 0
-  
   var state: State = .ongoing
   
   enum State {
     case ongoing, over
   }
+  
+  private var questions = [Question]()
+  private var currentIndex = 0
   
   var currentQuestion: Question {
     return questions[currentIndex]
@@ -29,6 +27,14 @@ class Game {
     score = 0
     currentIndex = 0
     state = .over
+    
+    QuestionManager.shared.get { (questions) in
+      self.questions = questions
+      self.state = .ongoing
+      let name = Notification.Name(rawValue: "QuestionsLoaded")
+      let notification = Notification(name: name)
+      NotificationCenter.default.post(notification)
+    }
   }
   
   func answerCurrentQuestion(with answer: Bool) {
@@ -48,5 +54,5 @@ class Game {
   
   private func finishGame() {
     state = .over
-  }
+}
 }

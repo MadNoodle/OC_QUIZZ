@@ -16,6 +16,7 @@
 		B93366361FB9B40300AA8228 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93366351FB9B40300AA8228 /* Question.swift */; };
 		B93366381FB9D04F00AA8228 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93366371FB9D04F00AA8228 /* Game.swift */; };
 		B933663A1FB9D08500AA8228 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93366391FB9D08500AA8228 /* QuestionManager.swift */; };
+		B9E30F2B1FBA385C00E8F51B /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E30F2A1FBA385C00E8F51B /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B93366351FB9B40300AA8228 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B93366371FB9D04F00AA8228 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B93366391FB9D08500AA8228 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		B9E30F2A1FBA385C00E8F51B /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		B93366331FB9B21400AA8228 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B9E30F2A1FBA385C00E8F51B /* QuestionView.swift */,
 				B93366261FB9AFD700AA8228 /* LaunchScreen.storyboard */,
 				B93366211FB9AFD700AA8228 /* Main.storyboard */,
 			);
@@ -185,6 +188,7 @@
 				B93366201FB9AFD700AA8228 /* ViewController.swift in Sources */,
 				B933661E1FB9AFD700AA8228 /* AppDelegate.swift in Sources */,
 				B933663A1FB9D08500AA8228 /* QuestionManager.swift in Sources */,
+				B9E30F2B1FBA385C00E8F51B /* QuestionView.swift in Sources */,
 				B93366381FB9D04F00AA8228 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
