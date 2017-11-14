@@ -26,8 +26,6 @@ class ViewController: UIViewController {
     questionView.addGestureRecognizer(panGestureRecognizer)
   }
   
-
-
   @objc func questionLoaded(){
     activityIndicator.isHidden = true
     newGameButton.isHidden = false
@@ -57,10 +55,19 @@ class ViewController: UIViewController {
       default:
       break
       }
-      
     }
   }
+  
+  private func scoreReveal(){
     
+    UIView.animate(withDuration: 0.3, delay: 0,usingSpringWithDamping:1.0,initialSpringVelocity:0.1, options: [], animations: {
+      
+      self.scoreLabel.center.x = UIScreen.main.bounds.width + 100
+      
+    }, completion: nil)
+  }
+  
+  
   private func transformQuestionView (gesture:UIPanGestureRecognizer){
     let translation =  gesture.translation(in: questionView)
     let translationTransform = CGAffineTransform(translationX: translation.x, y: translation.y)
@@ -77,9 +84,7 @@ class ViewController: UIViewController {
     else {
       questionView.style = .incorrect
       }
-    
     }
-  
   
   private func answerQuestion (){
     switch questionView.style {
@@ -100,24 +105,33 @@ class ViewController: UIViewController {
     } else {
       translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
     }
-    
+    scoreReveal()
     UIView.animate(withDuration: 0.3, animations: { self.questionView.transform = translationTransform }) { (success) in if success { self.showQuestionView()}
     }
   }
   
   func showQuestionView(){
+    
     questionView.transform = .identity
     questionView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
     questionView.style = .standard
     
+    
+    
+    
     switch game.state {
     case .ongoing:
       questionView.title = game.currentQuestion.title
+     
     case .over:
       questionView.title = "GAME OVER"
     }
     UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
       self.questionView.transform = .identity
+      
+    }, completion: nil)
+    UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+      self.scoreLabel.center.x = UIScreen.main.bounds.width / 2
       
     }, completion: nil)
     
